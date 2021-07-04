@@ -1,0 +1,14 @@
+have git repo app
+open app in code, open terminal
+heroku create (optional name)
+git push heroku main(/master etc branch)
+make one instance run
+heroku ps:scale web=1
+open app in browser
+heroku open
+see logs
+heroku logs --tail
+
+Procfile (used to specify commands used to start app)
+here: 
+web:npm start
