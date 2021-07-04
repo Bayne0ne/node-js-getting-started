@@ -27,3 +27,30 @@ heroku installs dependencies from package-json like local
 
 running app locally
 heroku local web
+or heroku local apparently
+
+update
+push to git heroku branch
+git add .
+git commit -m "commit name"
+git push heroku main
+
+check
+heroku open cool
+
+add addon, here: papertrail -> better logging, alerts sms etc
+heroku addon:create papertrail
+list addons:
+heroku addons
+open addon (here papertrail)
+heroku addons:open papertrail
+
+creating one-off dyno running bash
+heroku run bash
+ls, etc can all be used
+exit to exit, dyno is removed
+
+changing config vars (exposed as env vars) on heroku (not local)
+heroku config:set TIMES=2
+see set config var
+heroku config
