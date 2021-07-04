@@ -54,3 +54,9 @@ changing config vars (exposed as env vars) on heroku (not local)
 heroku config:set TIMES=2
 see set config var
 heroku config
+
+adding database, also sets DATABASE_URL (check with heroku config)
+heroku addons:create heroku-postgresql:hobby-dev
+install db to dependencies
+npm install pg
+
