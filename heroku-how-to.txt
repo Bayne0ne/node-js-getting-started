@@ -59,4 +59,20 @@ adding database, also sets DATABASE_URL (check with heroku config)
 heroku addons:create heroku-postgresql:hobby-dev
 install db to dependencies
 npm install pg
+add some stuff to index, make sure db has data or use the console for test entry, otherwise -> error:
 
+heroku pg:psql
+psql (11.5)
+SSL connection (cipher: DHE-RSA-AES256-SHA, bits: 256)
+Type "help" for help.
+=> create table test_table (id integer, name text);
+CREATE TABLE
+=> insert into test_table values (1, 'hello database');
+INSERT 0 1
+=> \q
+
+//cannot try adding to db as The local psql command could not be located. For help installing psql, see...
+error, seems to be a windows problem with pg
+
+removing addon:
+heroku addons:destroy papertrail
