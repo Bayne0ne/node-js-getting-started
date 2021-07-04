@@ -12,3 +12,18 @@ heroku logs --tail
 Procfile (used to specify commands used to start app)
 here: 
 web:npm start
+
+dyno: container running commands specified in procfile freen dynos sleep after 30 min of inactivity, 
+delay after first request while waking up. there's a free hours quota
+
+number of dynos running: (web is probably from procfile)
+heroku ps 
+scaling dynos to 0
+heroku ps:scale web=0
+scaling up
+heroku ps:scale web=1
+
+heroku installs dependencies from package-json like local
+
+running app locally
+heroku local web
